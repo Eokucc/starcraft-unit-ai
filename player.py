@@ -11,8 +11,6 @@ class Network:
         self.input_vars  = tf.placeholder(tf.float32, shape=[None, network_shape[0] ])
         self.correct_out = tf.placeholder(tf.float32, shape=[None, network_shape[-1]])
 
-#        if len(network_shape) != 2:
-#            raise Exception("Error: So far hidden layers are not supported")
         last_layer = self.input_vars
         size_last_layer = network_shape[0]
 
@@ -31,8 +29,7 @@ class Network:
             last_layer = next_layer
             size_last_layer = size_next_layer
 
-#        print (network_shape)
-#        print (network_shape[-2:])
+
         W = self.weight_variable(network_shape[-2:])
         b = self.bias_variable([network_shape[-1]])
         self.weights.append(W)
