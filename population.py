@@ -1,8 +1,10 @@
+# coding=utf-8
+
 #import collections as collections
 import network as network
 
 class Population:
-    
+
     def __init__(self,pop_size=100, network_shape=[8,8,8,2]):
         # how many networks are created
         self.pop_size = pop_size
