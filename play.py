@@ -2,8 +2,16 @@
 # coding=utf-8
 
 import population as pop
+import tcp as tcp
+
+#tcp.TCPConnection.send([0.312,0.45])
 
 #create network socket to communicate with Starcraft
+tcp_connect = tcp.TCPConnection()
+
+
+m = tcp_connect.read()
+print(m)
 
 #create base population
 p = pop.Population(100, network_shape=[3,2,3,4])
